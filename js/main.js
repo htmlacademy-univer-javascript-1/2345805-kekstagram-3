@@ -11,10 +11,6 @@ const checkLength = (currentStr, maxLength) => {
   return currentStr.length <= maxLength ? true : false;
 }
 
-console.log(checkLength("hello", 3));
+checkLength('hello', 3);
 
-let c = 0;
-while (c < 20) {
-  console.log(getRandomNumber(0, 5));
-  c++;
-}
+getRandomNumber(0, 5);
