@@ -12,5 +12,4 @@ const checkLength = (currentStr, maxLength) => {
 }
 
 checkLength('hello', 3);
-
 getRandomNumber(0, 5);
