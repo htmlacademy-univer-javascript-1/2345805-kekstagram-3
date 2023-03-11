@@ -15,12 +15,12 @@ const NUMBER_OF_OBJECTS = 25;
 
 function getDescription() {
   const comments = ['my mum', 'new day in life', 'i like this photo',
-  'amazing pic', 'some important thoughts', `it's my vacation`, 'playing with boys',
-  'my breakfast', 'my dad said it is funny', 'my dream', 'look at that, dude'];
+    'amazing pic', 'some important thoughts', 'it is my vacation', 'playing with boys',
+    'my breakfast', 'my dad said it is funny', 'my dream', 'look at that, dude'];
   return comments[getRandomNumber(0, comments.length-1)];
-};
+}
 
-const createObject = (i) => {
+function createObject(i) {
   return {
     id: i,
     url: `photos/${i}.jpg`,
@@ -31,15 +31,15 @@ const createObject = (i) => {
 };
 
 function createObjects(n) {
-  let objects = [];
+  const objects = [];
   let counter = 1;
   while (counter !== n+1) {
     objects.push(createObject(counter));
     counter++;
   }
   return objects;
-};
+}
 
-createObject(NUMBER_OF_OBJECTS);
+console.log(createObjects(NUMBER_OF_OBJECTS));
 
 
