@@ -28,7 +28,7 @@ function createObject(i) {
     likes: getRandomNumber(15, 200),
     comments: getRandomNumber(0, 200)
   };
-};
+}
 
 function createObjects(n) {
   const objects = [];
@@ -40,6 +40,6 @@ function createObjects(n) {
   return objects;
 }
 
-console.log(createObjects(NUMBER_OF_OBJECTS));
+createObjects(NUMBER_OF_OBJECTS);
 
 
