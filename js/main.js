@@ -1,13 +1,12 @@
 //идея реализации взята с сайта https://learn.javascript.ru/task/random-int-min-max
 const getRandomNumber = function(a, b) {
-  if (a < 0 || b < 0 || b <= a) {
-    //console.log('Error: Incorrect input data');
-    return;
-  }
-  return Math.floor(a + Math.random() * (b + 1 - a));
+  const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
+  const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
+  const result = Math.random * (upper - lower + 1) + lower;
+  return Math.floor(result);
 };
 
-const checkLength = (currentStr, maxLength) => currentStr.length <= maxLength;
+const checkLength = (string, length) => string.length <= length;
 
 checkLength('hello', 3);
 getRandomNumber(0, 5);
