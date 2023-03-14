@@ -9,4 +9,4 @@ const getRandomNumber = function(a, b) {
 
 const checkLength = (string, length) => string.length <= length;
 
-export {getRandomNumber, checkLength}
+export {getRandomNumber, checkLength};

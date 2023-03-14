@@ -1,4 +1,4 @@
-import { getRandomNumber } from "./util.js";
+import { getRandomNumber } from './util.js';
 
 function getDescription() {
   const comments = ['my mum', 'new day in life', 'i like this photo',
@@ -27,4 +27,4 @@ function createObjects(n) {
   return objects;
 }
 
-export {createObjects}
+export {createObjects};
