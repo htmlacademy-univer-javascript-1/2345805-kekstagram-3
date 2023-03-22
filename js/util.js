@@ -7,6 +7,6 @@ const getRandomNumber = function(a, b) {
   return Math.floor(result);
 };
 
-const checkLength = (string, length) => string.length <= length;
+const stringNotLongerLength = (string, length) => string.length <= length;
 
-export {getRandomNumber, checkLength};
+export {getRandomNumber, stringNotLongerLength};
