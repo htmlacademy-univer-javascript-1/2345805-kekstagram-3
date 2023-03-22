@@ -1,5 +1,3 @@
-import { createObjects } from './data.js';
+import { drawObjects } from './picDrawer.js';
 
-const NUMBER_OF_OBJECTS = 25;
-
-createObjects(NUMBER_OF_OBJECTS);
+drawObjects();
