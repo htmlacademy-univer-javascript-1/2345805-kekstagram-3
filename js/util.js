@@ -9,4 +9,6 @@ const getRandomNumber = function(a, b) {
 
 const stringNotLongerLength = (string, length) => string.length <= length;
 
-export {getRandomNumber, stringNotLongerLength};
+const isEscapeKey = (evt) => evt.key === 'Escape';
+
+export {getRandomNumber, stringNotLongerLength, isEscapeKey};
