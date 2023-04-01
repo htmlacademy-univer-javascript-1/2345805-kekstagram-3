@@ -1,45 +1,44 @@
 import { isEscapeKey } from './util.js';
 
-const downloadButton = document.querySelector('#upload-file');
-const cancelButton = document.querySelector('#upload-cancel');
-const hashtagInput = document.querySelector('.text__hashtags');
-const commentInput = document.querySelector('.text__description');
+const uploadFileElement = document.querySelector('#upload-file');
+const closeFormElement = document.querySelector('#upload-cancel');
+const hashtagInputElement = document.querySelector('.text__hashtags');
+const commentInputElement = document.querySelector('.text__description');
 
-function cleaningForm() {
-  downloadButton.value = '';
-  hashtagInput.value = '';
-  commentInput.value = '';
-}
 
-const onFormEscapeKeyDown = (evt) => {
-  if (isEscapeKey(evt)) {
-    evt.preventDefault();
-    closeDownloadPicWindow();
-  }
+const cleaningForm = () => {
+  uploadFileElement.value = '';
+  hashtagInputElement.value = '';
+  commentInputElement.value = '';
 };
 
-function openDownloadPicWindow() {
+const openDownloadPicWindow = () => {
   document.querySelector('.img-upload__overlay').classList.remove('hidden');
   document.body.classList.add('modal-open');
 
   document.addEventListener('keydown', onFormEscapeKeyDown);
-}
+};
 
-function closeDownloadPicWindow() {
+const closeDownloadPicWindow = () => {
   document.querySelector('.img-upload__overlay').classList.add('hidden');
   document.body.classList.remove('modal-open');
   document.removeEventListener('keydown', onFormEscapeKeyDown);
   cleaningForm();
+};
+
+function onFormEscapeKeyDown(evt){
+  if (isEscapeKey(evt)) {
+    evt.preventDefault();
+    closeDownloadPicWindow();
+  }
 }
 
 //added opening function on downloadButton
-downloadButton.addEventListener('change', () => {
+uploadFileElement.addEventListener('change', () => {
   openDownloadPicWindow();
 });
 
 //added closing function on cancelButton
-cancelButton.addEventListener('click', () => {
+closeFormElement.addEventListener('click', () => {
   closeDownloadPicWindow();
 });
-
-
