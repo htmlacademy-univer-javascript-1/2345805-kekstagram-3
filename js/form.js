@@ -1,4 +1,4 @@
-import { addValidator } from './form-validator.js';
+import { setUserFormSubmit } from './form-validator.js';
 import { isEscapeKey } from './util.js';
 import { initScaleEditor } from './scale-editor.js';
 import { initEffectController, resetEffectController } from './effect-controller.js';
@@ -23,12 +23,12 @@ const openDownloadPicWindow = () => {
   document.addEventListener('keydown', onFormEscapeKeyDown);
 };
 
-const closeDownloadPicWindow = () => {
+function closeDownloadPicWindow() {
   document.querySelector('.img-upload__overlay').classList.add('hidden');
   document.body.classList.remove('modal-open');
   document.removeEventListener('keydown', onFormEscapeKeyDown);
   cleaningForm();
-};
+}
 
 function onFormEscapeKeyDown(evt){
   if (isEscapeKey(evt)) {
@@ -50,6 +50,6 @@ const initForm = () => {
 
 initScaleEditor();
 initEffectController();
-addValidator();
+setUserFormSubmit();
 
-export {initForm};
+export {initForm, openDownloadPicWindow, closeDownloadPicWindow };

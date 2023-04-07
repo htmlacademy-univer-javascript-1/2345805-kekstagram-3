@@ -1,5 +1,8 @@
-import { renderPics } from './pic-render.js';
-import {createPicsList} from './data.js';
+import { setUserFormSubmit } from './form-validator.js';
+import { closeDownloadPicWindow } from './form.js';
+import { getPics } from './get-pics.js';
 
-const pictures = createPicsList();
-renderPics(pictures);
+
+getPics();
+
+setUserFormSubmit(closeDownloadPicWindow);
