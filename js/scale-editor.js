@@ -14,6 +14,10 @@ const changeScale = (step) => {
   }
 };
 
+const resetScale = () => {
+  imgElement.style.scale = 1;
+  scaleValueElement.value = '100%';
+};
 
 const initScaleEditor = () => {
   zoomInElement.addEventListener('click', () => {
@@ -25,6 +29,6 @@ const initScaleEditor = () => {
   });
 };
 
-export {initScaleEditor};
+export {initScaleEditor, resetScale};
 
 

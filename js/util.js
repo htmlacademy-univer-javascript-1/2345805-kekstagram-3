@@ -1,10 +1,9 @@
 
-
 const isValueLongerThan = (value, length) => value.length <= length;
 
 const isEscapeKey = (evt) => evt.key === 'Escape';
 
-const showAlert = (message) => {
+const showErrorAlert = (message) => {
   const ALERT_SHOW_TIME = 5000;
   const alertContainer = document.createElement('div');
   alertContainer.style.zIndex = '100';
@@ -26,4 +25,4 @@ const showAlert = (message) => {
   }, ALERT_SHOW_TIME);
 };
 
-export {isValueLongerThan, isEscapeKey, showAlert};
+export {isValueLongerThan, isEscapeKey, showErrorAlert};
