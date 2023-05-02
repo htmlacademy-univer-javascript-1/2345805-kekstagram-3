@@ -1,10 +1,9 @@
 import { initForm } from './form.js';
 
-
 const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
 const similarPicsContainer = document.querySelector('.pictures');
 
-const renderPics = function(picsToRender) {
+const renderPics = (picsToRender) => {
   const inputFragment = document.createDocumentFragment();
   for (const pictureProperties of picsToRender) {
     const newPictureElement = pictureTemplate.cloneNode(true);
@@ -14,8 +13,9 @@ const renderPics = function(picsToRender) {
     inputFragment.append(newPictureElement);
   }
   similarPicsContainer.append(inputFragment);
+
+  initForm();
 };
 
-initForm();
 
 export {renderPics};

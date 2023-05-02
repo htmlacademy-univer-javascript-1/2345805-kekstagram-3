@@ -57,14 +57,14 @@ const setEffectIntensity = () => {
 };
 
 const resetEffectController = () => {
-  effectLevelValue.value = '100%';
-  document.querySelector('.img-upload__preview').style.scale = 1;
+  effectLevelValue.value = '';
   if (previousEffect) {
     imgElement.classList.remove(`effects__preview--${previousEffect}`);
     imgElement.style.filter = '';
   }
   sliderBarField.hidden = true;
   previousEffect = undefined;
+  document.querySelector('#effect-none').checked = true;
 };
 
 const initEffectController = () => {

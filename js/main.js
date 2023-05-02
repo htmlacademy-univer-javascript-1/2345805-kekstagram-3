@@ -1,8 +1,6 @@
-import { setUserFormSubmit } from './form-validator.js';
-import { closeDownloadPicWindow } from './form.js';
-import { getPics } from './get-pics.js';
+import { getData } from './api.js';
+import {renderPics} from './pic-render.js';
 
 
-getPics();
+getData(renderPics);
 
-setUserFormSubmit(closeDownloadPicWindow);
